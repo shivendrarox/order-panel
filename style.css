@@ -1,5 +1,5 @@
 .bandf{
-	background:#192C3F;
+	background:white;
 	font:200 16px/18px 'Comfortaa', cursive;
 }
 
@@ -29,7 +29,7 @@
    /* Timeline vertical line */
   ul.timeline:before {
 	  content: ' ';
-	  background: #fff;
+	  background: teal;
 	  display: inline-block;
 	  position: absolute;
 	  left: 20px;
