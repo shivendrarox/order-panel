@@ -1,115 +1,130 @@
 <!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>CodePen - order panel</title>
-  <link rel="stylesheet" href="./style.css">
-
-</head>
-<body>
-<!-- partial:index.partial.html -->
-<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CodePen - order panel</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- partial:index.partial.html -->
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <title>Bootstrap Example</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link
+          href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap"
+          rel="stylesheet"
+        />
+        <link
+          rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        <script
+          src="https://kit.fontawesome.com/44c2423608.js"
+          crossorigin="anonymous"
+        ></script>
+      </head>
 
-<head>
-  <title>Bootstrap Example</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-  <script src="https://kit.fontawesome.com/44c2423608.js" crossorigin="anonymous"></script>
-</head>
+      <body class="bandf">
+        <nav class="navbar navbar-expand-sm navbar-light justify-content-end">
+          <!-- Brand -->
 
-<body class="bandf">
-  <nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-end ">
-    <!-- Brand -->
-
-    <!-- Links -->
-    <ul class="navbar-nav">
-
-      <!-- Dropdown -->
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-          My Account
-        </a>
-        <div class="dropdown-menu flex-fill">
-          <a class="dropdown-item" href="#">Contact Support</a>
-          <a class="dropdown-item text-danger" href="#">Log Out</a>
+          <!-- Links -->
+          <ul class="navbar-nav">
+            <!-- Dropdown -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbardrop"
+                data-toggle="dropdown"
+              >
+                My Account
+              </a>
+              <div class="dropdown-menu flex-fill">
+                <a class="dropdown-item text-danger" href="#"></a>
+              </div>
+            </li>
+          </ul>
+        </nav>
+        <div class="container-fluid">
+          <div class="row">
+            <div id="time-line-left" class="col-sm-6 col-md-6 col-lg-6">
+              <!-- Timeline -->
+              <ul class="timeline">
+                <li class="timeline-item bg-white rounded ml-3 p-4 shadow">
+                  <div class="timeline-arrow"></div>
+                  <h2 class="h5 mb-0">Title of section 1</h2>
+                  <span class="small text-gray"
+                    ><i class="fa fa-clock-o mr-1"></i>21 March, 2019</span
+                  >
+                </li>
+                <li class="timeline-item bg-white rounded ml-3 p-4 shadow">
+                  <div class="timeline-arrow"></div>
+                  <h2 class="h5 mb-0">Title of section 2</h2>
+                  <span class="small text-gray"
+                    ><i class="fa fa-clock-o mr-1"></i>5 April, 2019</span
+                  >
+                </li>
+                <li class="timeline-item bg-white rounded ml-3 p-4 shadow">
+                  <div class="timeline-arrow"></div>
+                  <h2 class="h5 mb-0">Title of section 3</h2>
+                  <span class="small text-gray"
+                    ><i class="fa fa-clock-o mr-1"></i>18 August, 2019</span
+                  >
+                </li>
+                <li class="timeline-item bg-white rounded ml-3 p-4 shadow">
+                  <div class="timeline-arrow"></div>
+                  <h2 class="h5 mb-0">Title of section 4</h2>
+                  <span class="small text-gray"
+                    ><i class="fa fa-clock-o mr-1"></i>10 October, 2019</span
+                  >
+                </li>
+              </ul>
+              <!-- End -->
+            </div>
+            <div class="text-white col-sm-6 col-md-6 col-lg-6">
+              <div class="table-responsive">
+                <table class="table table-hover">
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">First</th>
+                      <th scope="col">Last</th>
+                      <th scope="col">Handle</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>Jacob</td>
+                      <td>Thornton</td>
+                      <td>@fat</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td colspan="2">Larry the Bird</td>
+                      <td>@twitter</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
         </div>
-      </li>
-    </ul>
-  </nav>
-  <div class="container-fluid">
-  <div class="row">
-    <div id="time-line-left" class=" col-sm-6 col-md-6 col-lg-6">
-      
-       <!-- Timeline -->
-       <ul class="timeline">
-        <li class="timeline-item bg-white rounded ml-3 p-4 shadow">
-            <div class="timeline-arrow"></div>
-            <h2 class="h5 mb-0">Title of section 1</h2><span class="small text-gray"><i class="fa fa-clock-o mr-1"></i>21 March, 2019</span>
-        </li>
-        <li class="timeline-item bg-white rounded ml-3 p-4 shadow">
-            <div class="timeline-arrow"></div>
-            <h2 class="h5 mb-0">Title of section 2</h2><span class="small text-gray"><i class="fa fa-clock-o mr-1"></i>5 April, 2019</span>
-        </li>
-        <li class="timeline-item bg-white rounded ml-3 p-4 shadow">
-            <div class="timeline-arrow"></div>
-            <h2 class="h5 mb-0">Title of section 3</h2><span class="small text-gray"><i class="fa fa-clock-o mr-1"></i>18 August, 2019</span>
-        </li>
-        <li class="timeline-item bg-white rounded ml-3 p-4 shadow">
-            <div class="timeline-arrow"></div>
-            <h2 class="h5 mb-0">Title of section 4</h2><span class="small text-gray"><i class="fa fa-clock-o mr-1"></i>10 October, 2019</span>
-        </li>
-    </ul>
-    <!-- End -->
-      
-    </div>
-    <div class=" text-white  col-sm-6 col-md-6 col-lg-6">
-
-        <div class="table-responsive">
-          <table class="table table-hover">
-            <thead>
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td colspan="2">Larry the Bird</td>
-                <td>@twitter</td>
-              </tr>
-            </tbody>
-          </table>
-          
-        </div>
-      
-    </div>
-</div>
-</div>
-</body>
-
-</html>
-<!-- partial -->
-  
-</body>
+      </body>
+    </html>
+    <!-- partial -->
+  </body>
 </html>
