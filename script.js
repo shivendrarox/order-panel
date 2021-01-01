@@ -10,4 +10,4 @@ let _data = {
      "Content-type": "application/json; charset=UTF-8",
    "Authorization": "Bearer " + 'tTU3gFVUdP'} })
    .then(response => response.json())
-   .then(fetched_data => console.log(fetched_data));
+   .then(data => console.log(data));
