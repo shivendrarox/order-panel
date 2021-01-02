@@ -50,6 +50,11 @@ for (i=0;i<data.length;i++){
 }
 
 console.log(del_c+"-"+int_c)
+document.getElementById("DEL").innerHTML = del_c;
+document.getElementById("INT").innerHTML = int_c;
+document.getElementById("OOD").innerHTML = ood_c;
+document.getElementById("DEX").innerHTML = dex_c;
+document.getElementById("NFI").innerHTML = nfi_c;
 
 }
 
