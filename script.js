@@ -116,7 +116,7 @@ function renderTimeline() {
             let time_line_item = document.createElement("li");
 
       time_line_item.innerHTML = `
-          <li class="timeline-item bg-white rounded ml-3 p-4 shadow">
+          <li style="width:80%;" class="timeline-item bg-white rounded ml-3 p-4 shadow">
                   <div class="timeline-arrow"></div>
                   
                   <span class="pr-3 small text-gray mb-0">${g_data[i]["scan"][y]["status_detail"]}</span>
