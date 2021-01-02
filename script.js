@@ -70,9 +70,22 @@ function setCards(data) {
 function displayTable(){
 alert(event.currentTarget.id.slice(0,3))
 let i = 0;
+tbody = document.getElementsByTagName("tbody")
+tbody[0].innerHTML=""
 for(i=0;i<g_data.length;i++){
     if (g_data[i]["current_status_code"] == event.currentTarget.id.slice(0,3) ){
+        trow = document.createElement("tr")
+
+        console.log("inside")
         console.log(g_data[i])
+        trow.innerHTML=`<th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td> `;
+        tbody[0].appendChild(trow)
     }
 }
 }
