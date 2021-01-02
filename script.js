@@ -21,7 +21,7 @@ async function fetchData() {
 let g_data;
 async function main() {
   let data = await fetchData();
-  g_data = data
+  g_data = data;
   console.log(data);
   setCards(data);
 }
@@ -67,36 +67,74 @@ function setCards(data) {
   document.getElementById("NFI-CARD").addEventListener("click", displayTable);
 }
 
-function displayTable(){
-alert(event.currentTarget.id.slice(0,3))
-let i = 0;
-tbody = document.getElementsByTagName("tbody")
-tbody[0].innerHTML=""
-for(i=0;i<g_data.length;i++){
-    if (g_data[i]["current_status_code"] == event.currentTarget.id.slice(0,3) ){
-        trow = document.createElement("tr")
+function displayTable() {
+  event.stopImmediatePropagation();
+  event.stopPropagation();
+  alert(event.currentTarget.id.slice(0, 3));
+  let i = 0;
+  tbody = document.getElementsByTagName("tbody");
+  tbody[0].innerHTML = "";
+  for (i = 0; i < g_data.length; i++) {
+    if (
+      g_data[i]["current_status_code"] == event.currentTarget.id.slice(0, 3)
+    ) {
+      trow = document.createElement("tr");
+      trow.addEventListener("click", renderTimeline);
+      console.log("inside");
+      console.log(g_data[i]);
 
-        console.log("inside")
-        console.log(g_data[i])
-
-        let etd;
-        if (g_data[i]["current_status"] == "No Information Yet" ){
-            etd = "N/A"
-        }else
-        {
-            etd = g_data[i]["extra_fields"]["expected_delivery_date"]
-        }
-        trow.innerHTML=`<th scope="row">${g_data[i]["awbno"]}</th>
+      let etd;
+      if (g_data[i]["current_status"] == "No Information Yet") {
+        etd = "N/A";
+      } else {
+        etd = g_data[i]["extra_fields"]["expected_delivery_date"];
+      }
+      trow.innerHTML = `<th scope="row">${g_data[i]["awbno"]}</th>
         <td>${g_data[i]["carrier"]}</td>
         <td>${g_data[i]["from"]}</td>
         <td>${g_data[i]["to"]}</td>
         <td>USPA</td>
         <td>${etd}</td>
         <td>${g_data[i]["current_status"]}</td> `;
-        tbody[0].appendChild(trow)
+      tbody[0].appendChild(trow);
     }
+  }
 }
+
+function renderTimeline() {
+  event.stopImmediatePropagation();
+  event.stopPropagation();
+  let awbno = event.currentTarget.firstChild.innerHTML;
+  //alert(awbno);
+  let time_line = document.getElementById("timeline");
+  time_line.innerHTML = "";
+  let i;
+  for (i = 0; i < g_data.length; i++) {
+    if (g_data[i]["awbno"] == awbno) {
+        let y;
+        for (y=0;y<g_data[i]["scan"].length;y++){
+            let time_line_item = document.createElement("li");
+
+      time_line_item.innerHTML = `
+          <li class="timeline-item bg-white rounded ml-3 p-4 shadow">
+                  <div class="timeline-arrow"></div>
+                  
+                  <span class="pr-3 small text-gray mb-0">${g_data[i]["scan"][y]["status_detail"]}</span>
+                  <span class="pr-3 small text-gray"
+                    ><i class="fa fa-clock-o mr-1"></i>${g_data[i]["scan"][y]["location"]}</span
+                  >
+                  <span class=" small text-gray"
+                    ><i class="fa fa-clock-o mr-1"></i>${g_data[i]["scan"][y]["time"]}</span
+                  >
+                </li>
+          `;
+          time_line.appendChild(time_line_item)
+        }
+      
+    }
+  }
 }
+
 window.onload = function () {
   main();
 };
