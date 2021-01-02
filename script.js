@@ -119,12 +119,12 @@ function renderTimeline() {
           <li style="width:90%;" class="timeline-item bg-white rounded ml-3 p-4 shadow">
                   <div class="timeline-arrow"></div>
                   
-                  <span class="pr-1 small text-gray mb-0">${g_data[i]["scan"][y]["status_detail"]}</span>
-                  <span class="pr-1 small text-gray"
-                    ><i class="fa fa-clock-o mr-1"></i>${g_data[i]["scan"][y]["location"]}</span
+                  <p class=" small text-gray mb-0">${g_data[i]["scan"][y]["status_detail"]}</p>
+                  <p class="pt-3 small text-gray"
+                    ><i class="fa fa-clock-o mr-1"></i>${g_data[i]["scan"][y]["location"]}</p
                   >
-                  <span class=" small text-gray"
-                    ><i class="fa fa-clock-o mr-1"></i>${g_data[i]["scan"][y]["time"]}</span
+                  <p class=" small text-gray"
+                    ><i class="fa fa-clock-o mr-1"></i>${g_data[i]["scan"][y]["time"]}</p
                   >
                 </li>
           `;
