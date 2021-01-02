@@ -18,15 +18,15 @@ async function fetchData() {
   let result = await response.json();
   return result;
 }
-
+let g_data;
 async function main() {
   let data = await fetchData();
+  g_data = data
   console.log(data);
   setCards(data);
 }
 
 function setCards(data) {
-  //this.data = data;
   let i;
   let del_c = 0,
     int_c = 0,
@@ -63,13 +63,18 @@ function setCards(data) {
   document.getElementById("DEL-CARD").addEventListener("click", displayTable);
   document.getElementById("INT-CARD").addEventListener("click", displayTable);
   document.getElementById("OOD-CARD").addEventListener("click", displayTable);
-  document.getElementById("DEX-CARD").addEventListener("click", displayTable);
+  document.getElementById("UND-CARD").addEventListener("click", displayTable);
   document.getElementById("NFI-CARD").addEventListener("click", displayTable);
 }
 
-function displayTable(event){
+function displayTable(){
 alert(event.currentTarget.id.slice(0,3))
-
+let i = 0;
+for(i=0;i<g_data.length;i++){
+    if (g_data[i]["current_status_code"] == event.currentTarget.id.slice(0,3) ){
+        console.log(g_data[i])
+    }
+}
 }
 window.onload = function () {
   main();
