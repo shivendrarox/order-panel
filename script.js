@@ -70,7 +70,7 @@ function setCards(data) {
 function displayTable() {
   event.stopImmediatePropagation();
   event.stopPropagation();
-  alert(event.currentTarget.id.slice(0, 3));
+  //alert(event.currentTarget.id.slice(0, 3));
   let i = 0;
   tbody = document.getElementsByTagName("tbody");
   tbody[0].innerHTML = "";
