@@ -78,13 +78,21 @@ for(i=0;i<g_data.length;i++){
 
         console.log("inside")
         console.log(g_data[i])
-        trow.innerHTML=`<th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td> `;
+
+        let etd;
+        if (g_data[i]["current_status"] == "No Information Yet" ){
+            etd = "N/A"
+        }else
+        {
+            etd = g_data[i]["extra_fields"]["expected_delivery_date"]
+        }
+        trow.innerHTML=`<th scope="row">${g_data[i]["awbno"]}</th>
+        <td>${g_data[i]["carrier"]}</td>
+        <td>${g_data[i]["from"]}</td>
+        <td>${g_data[i]["to"]}</td>
+        <td>USPA</td>
+        <td>${etd}</td>
+        <td>${g_data[i]["current_status"]}</td> `;
         tbody[0].appendChild(trow)
     }
 }
