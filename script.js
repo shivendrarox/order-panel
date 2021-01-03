@@ -24,6 +24,9 @@ async function main() {
   g_data = data;
   console.log(data);
   setCards(data);
+  //default behaviour
+  document.getElementById("DEL").click()
+  document.getElementsByTagName("tr")[1].click();
 }
 
 function setCards(data) {
