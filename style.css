@@ -29,7 +29,7 @@
    /* Timeline vertical line */
   ul.timeline:before {
 	  content: ' ';
-	  background: teal;
+	  background: #007bff;
 	  display: inline-block;
 	  position: absolute;
 	  left: 20px;
@@ -56,11 +56,11 @@
   /* Timeline item circle marker */
   li.timeline-item::before {
 	  content: ' ';
-	  background: #ddd;
+	  background: teal;
 	  display: inline-block;
 	  position: absolute;
 	  border-radius: 50%;
-	  border: 3px solid #fff;
+	  border: 3px solid teal;
 	  left: 15px;
 	  width: 14px;
 	  height: 14px;

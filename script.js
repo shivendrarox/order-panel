@@ -121,7 +121,7 @@ function renderTimeline() {
                   
                   <p class=" small text-gray mb-0">${g_data[i]["scan"][y]["status_detail"]}</p>
                   <p class="pt-3 small text-gray"
-                    ><i class="fa fa-clock-o mr-1"></i>${g_data[i]["scan"][y]["location"]}</p
+                    ><i class="fas fa-map-marker-alt mr-1"></i>${g_data[i]["scan"][y]["location"]}</p
                   >
                   <p class=" small text-gray"
                     ><i class="fa fa-clock-o mr-1"></i>${g_data[i]["scan"][y]["time"]}</p
